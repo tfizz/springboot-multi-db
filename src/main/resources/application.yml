@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: multi-db-app
+  courses:
+    datasource:
+      jdbcUrl: jdbc:mysql://192.168.0.4:44001/coursesDB
+      username: courseDbUser
+      password: courseDbPassword
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  students:
+    datasource:
+      jdbcUrl: jdbc:mysql://192.168.0.4:44002/studentsDB
+      username: studentDbUser
+      password: studentDbPassword
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.dev.coder.multiDbConn: DEBUG

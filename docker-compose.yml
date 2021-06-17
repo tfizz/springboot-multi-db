@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  courses-db:
+    image: mariadb:10.4.12-bionic
+    container_name: coursesDb
+    ports:
+    - 44001:3306
+    environment:
+      MYSQL_DATABASE: coursesDB
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: courseDbUser
+      MYSQL_PASSWORD: courseDbPassword
+  students-db:
+    image: mariadb:10.4.12-bionic
+    container_name: studentsDb
+    ports:
+    - 44002:3306
+    environment:
+      MYSQL_DATABASE: studentsDB
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: studentDbUser
+      MYSQL_PASSWORD: studentDbPassword
